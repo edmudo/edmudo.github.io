@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Edmund Do</title>
+        <meta name='description' content='An online portfolio for computer scientist and student Edmund Do' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta http-equiv='Content-Type' type='text/html; charset=utf-8' />
+        <link rel='stylesheet' type='text/css' href='style.css' />
+    </head>
+    <body>
+        <div id='container'>
+            <section id='blurb'>
+                <img alt='Edmund Do' src='images/me.png' />
+                <p>Hello, I'm <span class='bold'>Edmund Do</span>. Studying computer science at the University of Vermont.</p>
+            </section>
+
+            <section id='projects'>
+                <div class='project'>
+                    <div class='project-elem project-front'>
+                        <img alt='Chat client web app' src='images/Chatbox.png' />
+                        <div class='project-elem project-back'>
+                            <div class='project-title'>Chatbox</div>
+                            <div class='project-description'>
+                                <p>Communicate with multiple clients at a time!</p>
+                                <p>Built with Node.js and implements long polling to establish a method for sending and receiving to connected clients.</p>
+                                <p><a href='http://github.com/edmudo/chatbox'>Github</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='project'>
+                    <div class='project-elem project-front'>
+                        <img alt='RC Car placeholder' src='images/Sub.png' />
+                        <div class='project-elem project-back'>
+                            <div class='project-title'>RC Car</div>
+                            <div class='project-description'>
+                                <p>Control a model car with a Raspberry Pi!</p>
+                                <p><a href='http://github.com/edmudo/chatbox'>Github</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='project'>
+                    <div class='project-elem project-front'>
+                        <img alt='Packet capture window' src='images/Jpcap.png' />
+                        <div class='project-elem project-back'>
+                            <div class='project-title'>Packet Capture</div>
+                            <div class='project-description'>
+                                <p>Capture incoming and outgoing traffic.</p>
+                                <p>Uses the JPCap library to read packets. Detects ARP spoofs given that the network was safe at the time of start.</p>
+                                <p><a href='http://github.com/edmudo/chatbox'>Github</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id='page-footer'>
+                <ul class='stripped-list'>
+                    <li><a class='footer-link' href='https://github.com/edmudo'><img class='inline-img small-icon' alt='Github' src='images/mark-github.svg' />edmudo</a></li>
+                    <li><a class='footer-link' href='mailto:edo@uvm.edu'><img class='inline-img small-icon' alt='Phone' src='images/mail.svg' />edo@uvm.edu</a></li>
+                    <li><a class='footer-link' href='pdfs/resume.pdf'><img class='inline-img small-icon' alt='Resume' src='images/file.svg' />Resume</a></li>
+                </ul>
+            </footer>
+            <script>
+                var getWrappedItems = function (cssSelector) {
+                    var wrappedItems = [];
+                    var footerList = document.querySelectorAll(cssSelector);
+                    var liTop = footerList[0].getBoundingClientRect().top;
+                    for (var i = 1; i < footerList.length; i++) {
+                        var li = footerList[i];
+                        var lBound = li.getBoundingClientRect();
+                        if (liTop != lBound.top) {
+                            wrappedItems.push(li);
+                        }
+                    }
+                    return wrappedItems;
+                }
+
+                var winEvent = function (event) {
+                    var isWrapped = getWrappedItems(".project").length > 1;
+
+                    var parentSelector = "#page-footer .stripped-list";
+                    var parentElem = document.querySelector(parentSelector)
+
+                    parentElem.style.flexFlow = isWrapped ? "column" : "row";
+                }
+
+                window.onload = winEvent;
+                window.onresize = winEvent;
+            </script>
+        </div>
+    </body>
+</html>

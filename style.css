@@ -1,0 +1,168 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+body, a {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 1.0em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#container {
+    width: 100%;
+}
+
+#blurb {
+    display: flex;
+    align-items: center;
+    height: 25%;
+}
+
+#blurb img {
+    width: 150px;
+    height: 150px;
+    margin-right: 36px;
+    border-radius: 50%;
+}
+
+#blurb p {
+    width: 60%;
+    font-size: 2.0em;
+}
+
+.project {
+    position: relative;
+    margin: 20px;
+    width: 250px;
+}
+
+.project-elem {
+    display: flex;
+    flex-flow: column;
+    width: inherit;
+    height: 250px;
+}
+
+.project-title {
+    display: block;
+    font-size: 1.5em;
+    height: 1.2em;
+    color: rgb(238, 238, 238);
+    background-color: rgba(51, 51, 51, 0.95);
+    padding: 10px 15px;
+}
+
+.project-front {
+    border: 1px solid black;
+    position: relative;
+}
+
+.project-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(238, 238, 238);
+}
+
+.project-description {
+    display: none;
+    padding: 0 15px;
+}
+
+.project-description a {
+    color: #4080FF;
+}
+
+.project-elem:hover .project-back {
+    display: inline-block;
+    background-color: rgba(51, 51, 51, 0.95);
+}
+
+.project-back:hover .project-title {
+    background: none;
+}
+
+.project-back:hover .project-description {
+    display: block;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.stripped-list {
+    list-style: none;
+}
+
+.stripped-list li {
+    display: inline-block;
+}
+
+#page-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+#page-footer .stripped-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+#page-footer .stripped-list li {
+    margin: 12px 20px;
+}
+
+.inline-img {
+    vertical-align: middle;
+    margin: 0 1.0em;
+}
+
+.small-icon {
+    height: 16px;
+    width: 16px;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
