@@ -76,6 +76,10 @@ a, table.table a {
   }
 }
 
+.post-title {
+  margin-bottom: 1rem;
+}
+
 .post-description {
   margin-bottom: 2rem;
   a {
@@ -287,6 +291,7 @@ footer.sticky-bottom {
 // Projects
 
 .projects {
+  margin-bottom: 1.2rem;
   .grid-item {
     width: 250px;
     margin-bottom: 10px;
