@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Code for other projects can be found on <a href="https://github.com/edmudo" target="\_blank">Github</a>.
 nav: true
 ---
 
