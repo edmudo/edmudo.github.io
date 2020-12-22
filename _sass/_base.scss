@@ -385,13 +385,15 @@ footer.sticky-bottom {
             border-color: $theme-color;
           }
         }
-
         a.btn:first-child {
           margin-left: 0;
         }
-
         a.btn:last-child {
           margin-right: 0;
+        }
+        a.btn.toggled {
+          color: $theme-color;
+          border-color: $theme-color;
         }
       }
       .hidden {
@@ -407,7 +409,6 @@ footer.sticky-bottom {
 
         p {
           line-height: 1.4em;
-          margin: 10px;
         }
         pre {
           font-size: 1em;
@@ -423,8 +424,8 @@ footer.sticky-bottom {
         -o-transition: 0.15s ease;
         transition: all 0.15s ease;
       }
-      div.abstract.hidden {
-        border: dashed 1px white;
+      div.abstract {
+        margin-top: 1em;
       }
       div.abstract.hidden.open {
         border-color: $grey-color;
