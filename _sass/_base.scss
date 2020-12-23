@@ -31,6 +31,10 @@ a, table.table a {
   text-align: center;
 }
 
+.caption.long {
+  text-align: left;
+}
+
 
 // Profile
 
@@ -227,8 +231,8 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid $grey-color-light;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
   font-size: 0.9rem;
 }
 
