@@ -5,13 +5,14 @@ permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
 ---
-{% assign sorted_projects = site.projects | group_by: "category" | sort: "importance" %}
+{% assign sorted_projects = site.projects | group_by: "category" | sort: "name" %}
 {% for projects in sorted_projects %}
 {% if projects.name != '' %}
 <h2 class='project-category post-title'>{{projects.name}}</h2>
 {% endif %}
 <div class="projects grid">
-  {% for project in projects.items %}
+  {% assign project_items = projects.items | sort: "importance" %}
+  {% for project in project_items %}
     <div class="grid-item">
       {% if project.redirect %}
       <a href="{{ project.redirect }}" target="_blank">
