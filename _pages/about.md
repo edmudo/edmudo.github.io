@@ -14,4 +14,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a Master's student in Computer Science at the University of Vermont. My advisor is Prof. Byung Lee. My current research interests are broadly in network science, data mining, and machine learning.
+I'm a Master's student in Computer Science at the University of Vermont. My advisor is Prof. Byung Lee. My research interests are  broadly in network science, data mining, and machine learning. I am particularly interested in applications to social networks.
+
+Currently, I am working on research relating to organizational dynamics and job performance. Previously, I did some research on classifying 12-lead electrocardiograms with machine learning.
